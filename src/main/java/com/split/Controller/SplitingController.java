@@ -1,19 +1,15 @@
-package com.split.Controller;
+package com.split.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 
-import com.split.Service.SplitingService;
-import com.split.entities.Greeting;
 import com.split.entities.Page;
+import com.split.service.SplitingService;
 
 @RestController
 public class SplitingController {
