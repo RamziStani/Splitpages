@@ -13,6 +13,7 @@ import org.springframework.http.MediaType;
 
 import com.split.Service.SplitingService;
 import com.split.entities.Greeting;
+import com.split.entities.Page;
 
 @RestController
 public class SplitingController {
@@ -20,15 +21,16 @@ public class SplitingController {
 	@Autowired
 	SplitingService splitingService;
 
-	@GetMapping(value="/hello")
-    public List<Greeting> sayHello() throws InvalidPasswordException, IOException {
+	
+	//pages extraction 
+	@GetMapping(value="/extraction")
+	
+	 public List<Page> extract_content() throws InvalidPasswordException, IOException {
 
-     List <Greeting>   g = new ArrayList<Greeting>();
-     g= splitingService.countpages();
-     
-     return g;
-        
-    }
-	
-	
+	     List <Page>   pages = new ArrayList<Page>();
+	     pages = splitingService.Extract_pages();
+	     
+	     return pages;
+	        
+	    }
 }
