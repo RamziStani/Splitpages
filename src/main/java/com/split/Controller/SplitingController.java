@@ -27,7 +27,7 @@ public class SplitingController {
 	 public List<Page> extract_content() throws InvalidPasswordException, IOException {
 
 	     List <Page>   pages = new ArrayList<Page>();
-	     pages = splitingService.Extract_pages();
+	     pages = splitingService.Extract();
 	     
 	     return pages;
 	        
