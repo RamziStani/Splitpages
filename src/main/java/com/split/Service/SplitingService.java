@@ -45,8 +45,9 @@ document.getDocumentCatalog().setDocumentOutline(null);
 				doc.getClass();
 
 				if (!document.isEncrypted()) {
-
-					Rectangle2D region = new Rectangle2D.Double(0,100,550,700);
+//Ignore headers and footers
+					//Rectangle2D region = new Rectangle2D.Double(0,100,550,700);
+					Rectangle2D region = new Rectangle2D.Double(0,50,550,700);
 					String regionName = "region";
 					PDFTextStripperByArea stripper;
 					stripper = new PDFTextStripperByArea();
