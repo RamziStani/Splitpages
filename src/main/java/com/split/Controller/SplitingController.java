@@ -32,16 +32,6 @@ public class SplitingController {
 	     return pages;
 	        
 	    }
-	//test
-		@GetMapping(value="/test")
-		
-		 public List<Page> extract() throws InvalidPasswordException, IOException {
-
-		     List <Page>   pages = new ArrayList<Page>();
-		     pages = splitingService.Extract_pages();
-		     
-		     return pages;
-		        
-		    }
+	
 	
 }

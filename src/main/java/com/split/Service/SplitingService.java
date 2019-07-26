@@ -118,32 +118,4 @@ document.getDocumentCatalog().setDocumentOutline(null);
 	}
 	
 	
-	public List<Page> Extraction() throws InvalidPasswordException, IOException {
-		String pdfFileInText = "";
-		String result ="";
-		
-		List<Page> Extracted_pages = new ArrayList<Page>();
-		File file = new File("C:/Users/rakkari/Desktop/tot.pdf"); 
-	    PDDocument document = PDDocument.load(file);
-	    PDFTextStripper pdfStripper = new PDFTextStripper();
-	    
-	    FileWriter wite = new FileWriter("C:/Users/rakkari/Desktop/Total.txt");
-		BufferedWriter bw = new BufferedWriter(wite);
-	    //load all lines into a string
-	    String pages = pdfStripper.getText(document);
-
-	    //split by detecting newline
-	    String[] lines = pages.split("\\r\\n\\r\\n");
-
-	    int count=1;   //Just to indicate line number
-	    for(String temp:lines)
-	    {
-	        
-	       
-	        bw.write(temp.trim());
-	        bw.newLine();
-	    }
-	    bw.close();
-			return Extracted_pages;
-	}
 }
